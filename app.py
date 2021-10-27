@@ -8,7 +8,11 @@ import pandas as pd
 from gensim.models.doc2vec import Doc2Vec
 from xgboost import XGBClassifier
 import nltk
+
+# Set up at app load
 nltk.download('stopwords')
+nltk.download('wordnet')
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
 # Set font formatting
 font = {'family' : 'normal',
@@ -18,7 +22,7 @@ font = {'family' : 'normal',
 rc('font', **font)
 
 # Load Doc2Vec model
-os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+
 d2v = Doc2Vec.load('model/d2v.model')
 
 # Load tree model
