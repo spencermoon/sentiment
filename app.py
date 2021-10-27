@@ -7,7 +7,8 @@ import pickle
 import pandas as pd
 from gensim.models.doc2vec import Doc2Vec
 from xgboost import XGBClassifier
-
+import nltk
+nltk.download('stopwords')
 
 # Set font formatting
 font = {'family' : 'normal',
