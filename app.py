@@ -24,10 +24,9 @@ font = {'family' : 'normal',
 rc('font', **font)
 
 # Load Doc2Vec model
-
 d2v = Doc2Vec.load('model/d2v.model')
 
-# Load tree model
+# Load XGBoost model
 open_file = open('model/xgboost.pkl', "rb")
 model = pickle.load(open_file)
 open_file.close()
