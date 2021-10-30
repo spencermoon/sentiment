@@ -17,7 +17,8 @@ step for improving this project is to implement the tuned ALBERT model.
 
 Streamlit was used to serve the model online. The web app takes a text input
 from the user and runs it through the XGBoost model to generate probabilities 
-for positive and negative sentiment, which are then surfaced as a bar chart.
+for positive and negative sentiment, which are then surfaced as a bar chart. 
+Code to create and serve the app can be found in `app.py`.
 
 ## Running Locally
 
