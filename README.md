@@ -1,4 +1,4 @@
-# Twitter Sentiment Model
+# Twitter Sentiment App
 
 This application determines the sentiment of a user-provided tweet. It can be 
 accessed [here](https://share.streamlit.io/spencermoon/sentiment/main/app.py).

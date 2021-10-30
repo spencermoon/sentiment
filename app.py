@@ -8,6 +8,8 @@ import pandas as pd
 from gensim.models.doc2vec import Doc2Vec
 from xgboost import XGBClassifier
 import nltk
+import time
+
 
 # Set up at app load
 nltk.download('stopwords')
@@ -31,11 +33,13 @@ model = pickle.load(open_file)
 open_file.close()
 
 # Create user input box
+st.title('Twitter Sentiment App')
+st.write('\n')
 tweet = st.text_input('Write your own tweet here:', key='tweet', max_chars=140)
+st.write('\n')
 
 # Surface sentiment analysis
 if len(tweet)>0: 
-
 	# Preprocess data
 	text = preprocess(tweet)
 	text = d2v.infer_vector(text)
@@ -44,8 +48,8 @@ if len(tweet)>0:
 	# Make prediction
 	prediction = model.predict_proba(text)
 	results = pd.DataFrame({'Sentiment': ['Negative', 'Positive'],
-			   				'Percentage': [prediction[0][0]*100, 
-			   							   prediction[0][1]*100]})
+			   	'Percentage': [prediction[0][0]*100, 
+			   		       prediction[0][1]*100]})
 
 	# Draw chart for probabilities
 	fig, ax = plt.subplots()
