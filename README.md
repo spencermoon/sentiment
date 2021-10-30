@@ -28,5 +28,5 @@ The code to create and serve the app can be found in `app.py`.
 1. Clone the repo and set directory path to the repo in terminal.
 2. Activate a virtual environment.
 3. Run `pip install -r requirements.txt` to install necessary packages.
-4. Conduct test by running `pytest helper/test.py`	
+4. Conduct a test by running `pytest helper/test.py`	
 5. Run `streamlit run app.py` to initiate the app locally.
