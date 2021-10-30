@@ -2,6 +2,9 @@
 
 This application determines the sentiment of a user-provided tweet. It can be 
 accessed [here](https://share.streamlit.io/spencermoon/sentiment/main/app.py).
+The app serves as the final capstone project submission for the [ML engineering
+track](https://www.springboard.com/courses/ai-machine-learning-career-track/) 
+on Springboard.
 
 ## Approach
 
